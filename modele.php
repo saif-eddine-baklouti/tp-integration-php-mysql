@@ -5,18 +5,17 @@
         C'est donc dans ce fichier que nous retrouverons TOUTES les requêtes SQL sans AUCUNE exception. C'est aussi ici que se trouvera la CONNEXION à la base de données ET les informations de connexion relatives à celle-ci. 
     */
     //à modifier pour déployer sur Webdev
-    define("SERVER", "localhost");
-    define("USERNAME", "root");
-    define("PASSWORD", "");
-    define("DBNAME", "blog");
+    // define("SERVER", "localhost");
+    // define("USERNAME", "root");
+    // define("PASSWORD", "");
+    // define("DBNAME", "blog");
 
     //exemple de version webdev
-    /*define("SERVER", "localhost");
-    define("USERNAME", "e1123980");
-    define("PASSWORD", "lemotdepassequiestdanslefichier:my.cnf");
-    define("DBNAME", "e1123980");
-    */
-
+    define("SERVER", "localhost");
+    define("USERNAME", "e2395393");
+    define("PASSWORD", "VnY8XluICKYcbHSPvcmx");
+    define("DBNAME", "e2395393");
+    
     function connectDB()
     {
         //se connecter à la base de données
@@ -34,25 +33,12 @@
     //le seul appel à connectDB dont vous avez besoin, puisque vos fonctions vont utiliser cette connexion via l'utilisation du mot-clé global 
     $connexion = connectDB();
 
-    // function obtenir_equipes()
-    // {
-    //     global $connexion;
-
-    //     //avant de continuer on teste la requête dans PHPMYADMIN
-    //     $requete = "SELECT id, nom, ville, nb_victoires FROM equipe";
-
-    //     //exécuter la requête avec mysqli_query 
-    //     $resultats = mysqli_query($connexion, $requete);
-
-    //     return $resultats;
-    // }
-
     function obtenir_articles()
     {
         global $connexion;
 
         //avant de continuer on teste la requête dans PHPMYADMIN
-        $requete = "SELECT id, titre, texte, auteur FROM article ORDER BY id DESC   ";
+        $requete = "SELECT id, titre, texte, auteur FROM article ORDER BY id DESC ";
 
         //exécuter la requête avec mysqli_query 
         $resultats = mysqli_query($connexion, $requete);
@@ -193,7 +179,6 @@
 
         //avant de continuer on teste la requête dans PHPMYADMIN
         $requete = "UPDATE article SET titre=?, texte=? WHERE auteur =? AND id=?";
-        // $requete = "UPDATE joueur SET prenom='$prenom', nom='$nom', nb_buts=$nb_buts, nb_passes =$nb_passes, id_equipe=$id_equipe  WHERE ID=$id";
         
         //2. préparer la requête
         $reqPrep = mysqli_prepare($connexion, $requete);

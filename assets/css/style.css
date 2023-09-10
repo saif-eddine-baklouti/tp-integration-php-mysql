@@ -1,0 +1,45 @@
+* {
+    margin:1rem;
+    
+    text-align:center;
+}
+main {
+    background-color: rgba(172, 255, 47, 0.488);
+
+}
+button {
+    border-radius: 12rem;
+    padding:1rem ;
+    background-color: green;
+    font-size: larger;
+}
+
+p {
+    font-size: larger;
+    color: red;
+}
+h1 {
+    background-color: green;
+    padding: 0;
+}
+
+a {
+    font-size: larger;
+    color: blue;
+}
+label {
+    font-size: larger;
+}
+
+li {
+    font-size: larger;
+    font-style: italic;
+    list-style: none;
+}
+
+form {
+    background-color: greenyellow;
+    padding: 1%;
+    margin-left: 24rem;
+    margin-right: 24rem;
+}

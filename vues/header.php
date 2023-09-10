@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= $titre ?></title>
 
-    <link rel="stylesheet" href="/Exercices-php-mvc/v5/vues/style/style.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+    
+
 </head>
 <body>

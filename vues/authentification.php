@@ -2,12 +2,12 @@
 
 
 
-<form method='POST'>
+<form action="index.php" method='POST'>
     <label>Username : 
     <input type="text" name="username" >
     </label>
     <label>Password :
-    <input type="text" name="password" >
+    <input type="password" name="password" >
     </label>
     <input type="hidden" name="commande" value="Login">
     <p><?php if(isset($_REQUEST["message"])) echo $_REQUEST["message"]; ?></p>

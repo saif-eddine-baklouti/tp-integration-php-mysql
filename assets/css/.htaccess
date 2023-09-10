@@ -1,0 +1,6 @@
+# Autoriser l'accès aux fichiers CSS
+<FilesMatch "\.css$">
+    Order allow,deny
+    Allow from all
+    Require all granted
+</FilesMatch>
